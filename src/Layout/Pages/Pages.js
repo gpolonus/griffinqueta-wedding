@@ -3,19 +3,12 @@ import React, { Component } from 'react';
 import './Pages.css';
 import PageConfig from '../../services/PageConfig';
 import Page from './Page/Page';
-// import { detectSwipe } from './SwipeUtil';
-// import ReactSwipe from 'react-swipe';
+
 
 export default class extends Component {
 
   state = {
     path: '/'
-  }
-
-  constructor(props) {
-    super(props);
-
-    this.pages = Array(4).fill().map(() => React.createRef());
   }
 
   changePath = (path) => {
@@ -34,38 +27,13 @@ export default class extends Component {
     return position;
   }
 
-  swipe = (direction) => {
-    console.log(direction);
-    let nextX = -1;
-    switch(direction) {
-      case 'left':
-        nextX = PageConfig.find(page => page.path === this.state.path).x + 1;
-        break;
-        case 'right':
-        nextX = PageConfig.find(page => page.path === this.state.path).x - 1;
-        break;
-    }
-    if(nextX > -1) {
-      this.setState({
-        path: PageConfig.find(page => page.x === nextX).path
-      });
-    }
-  }
-
-  // getRef = (ref) => {
-  //   detectSwipe(ref, this.swipe);
-  // }
-
   render() {
     const path = this.state.path;
     const showPage = PageConfig.find(page => page.path === path);
     return (
-      <div className="Pages"
-        // ref={ this.getRef }
-      >
-        {/* <ReactSwipe> */}
+      <div className="Pages">
         {
-          PageConfig.map((page, i) =>
+          PageConfig.map((page) =>
             <Page
               key={page.path}
               path={page.path}
@@ -76,9 +44,7 @@ export default class extends Component {
             />
           )
         }
-        {/* </ReactSwipe> */}
       </div>
     );
   }
 }
-
