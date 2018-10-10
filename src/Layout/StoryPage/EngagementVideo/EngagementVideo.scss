@@ -1,0 +1,11 @@
+
+@import './../../../scss/mixins.scss';
+
+.EngagementVideo {
+  iframe {
+    width: 100%;
+    @include desktop {
+      width: 646px;
+    }
+  }
+}

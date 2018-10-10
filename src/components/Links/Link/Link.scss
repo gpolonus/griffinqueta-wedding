@@ -1,0 +1,12 @@
+
+@import '../../../scss/mixins.scss';
+
+span.Link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

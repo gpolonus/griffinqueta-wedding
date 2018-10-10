@@ -1,0 +1,12 @@
+
+@import '../../../../scss/mixins.scss';
+
+.DetailsLinks {
+  text-align: center;
+  .Links {
+    color: $purple-mid;
+    .Link {
+      color: $purple-mid;
+    }
+  }
+}

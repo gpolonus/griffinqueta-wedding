@@ -1,0 +1,39 @@
+
+@import '../../../scss/mixins.scss';
+
+.DetailsSubtitle {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+
+  h2.Subtitle {
+    color: $grey-dark;
+    -webkit-font-smoothing: initial;
+    text-shadow: none;
+
+    .contents {
+      position: relative;
+
+      .backing {
+        position: absolute;
+        top: 0;
+        left: -10%;
+        width: 120%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.6;
+        z-index: -1;
+        border-radius: 10px;
+      }
+    }
+
+    @include desktop {
+      color: $grey-mid-dark;
+
+      .contents {
+        .backing {
+          display: none;
+        }
+      }
+    }
+  }
+}

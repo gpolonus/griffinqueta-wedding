@@ -1,0 +1,6 @@
+
+@import '../../scss/mixins.scss';
+
+.Overlay {
+  @include overlay(black, 1);
+}

@@ -1,0 +1,59 @@
+
+// mixins
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// colors
+$page-text-color: black;
+
+$purple-light: #DCD3FB;
+$purple-mid: #D1C3EA;
+$purple-dark: #B07FCD;
+
+$grey-light: #D7D3E0;
+$grey-mid: #AAAAB4;
+$grey-mid-dark: #72717A;
+$grey-dark: #544E5C;
+
+$transition-time: 1.5s;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin overlay($color, $opacity) {
+  background-color: $color;
+  opacity: $opacity;
+  position: fixed;
+  top: inherit;
+  left: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin pic-bg($pic) {
+  background-color: black;
+  background-image: url($pic);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin pic-full-bg($pic) {
+  @include overlay(black, 1);
+  @include pic-bg($pic);
+  overflow: scroll;
+}
+
+@mixin text-border($color) {
+  text-shadow: -1px 0 1px $color, 0 1px 1px $color, 1px 0 1px $color, 0 -1px 1px $color;
+}

@@ -1,0 +1,57 @@
+
+@import '../../../scss/mixins.scss';
+
+.BabyPics {
+  position: relative;
+  width: 90%;
+  margin: 0 5%;
+  height: 80%;
+
+  .baby {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    transition: left $transition-time, right $transition-time;
+    height: 40%;
+    @include desktop {
+      height: 70%;
+    }
+
+    .image {
+      height: 100%;
+      width: 70%;
+      margin-left: 15%;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      border-radius: 40px;
+    }
+
+    &.griffin {
+      left: -70%;
+      transition-delay: calc(#{$transition-time} + 0.5s);
+      .image {
+        @include pic-bg('./griffin_baby.jpg');
+      }
+    }
+
+    &.queta {
+      right: -70%;
+      transition-delay: calc(#{$transition-time} * 2 + 0.5s);
+      .image {
+        @include pic-bg('./queta_baby.jpg');
+      }
+    }
+  }
+
+  &.move {
+    .baby {
+      &.griffin {
+        left: 0;
+      }
+
+      &.queta {
+        right: 0;
+      }
+    }
+  }
+}

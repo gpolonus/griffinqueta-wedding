@@ -1,0 +1,28 @@
+
+@import '../../scss/mixins.scss';
+
+.DetailsPage {
+  @include pic-full-bg('Engagement-0137-min.JPG');
+  background-position: 80% top;
+  @include desktop {
+    background-position: right top;
+  }
+
+  .content {
+    transition: top $transition-time;
+    transition-delay: $transition-time;
+    @include desktop {
+      width: 50%;
+      padding-left: 5%;
+      position: relative;
+      left: 0;
+      top: 100%;
+    }
+  }
+
+  &.move {
+    .content {
+      top: 0;
+    }
+  }
+}

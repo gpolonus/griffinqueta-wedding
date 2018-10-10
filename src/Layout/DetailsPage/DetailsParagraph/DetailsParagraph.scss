@@ -1,0 +1,9 @@
+
+@import '../../../scss/mixins.scss';
+
+.DetailsParagraph {
+  .Paragraph {
+    color: black;
+    @include text-border(white);
+  }
+}

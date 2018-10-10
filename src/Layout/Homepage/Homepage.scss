@@ -1,0 +1,9 @@
+
+@import '../../scss/mixins.scss';
+
+.Homepage {
+  @include pic-full-bg('Engagement-0188-min-min.JPG');
+  .title, .Subtitle {
+    color: white;
+  }
+}
