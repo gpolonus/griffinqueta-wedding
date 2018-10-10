@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import './Pages.css';
 import PageConfig from '../../services/PageConfig';
 import Page from './Page/Page';
-// import { detectSwipe } from './SwipeUtil';
-// import ReactSwipe from 'react-swipe';
+import ReactSwipe from 'react-swipe';
+import withMobile from '../../hoc/withMobile';
 
-export default class extends Component {
+class Pages extends Component {
 
   state = {
     path: '/'
@@ -34,37 +34,24 @@ export default class extends Component {
     return position;
   }
 
-  swipe = (direction) => {
-    console.log(direction);
-    let nextX = -1;
-    switch(direction) {
-      case 'left':
-        nextX = PageConfig.find(page => page.path === this.state.path).x + 1;
-        break;
-        case 'right':
-        nextX = PageConfig.find(page => page.path === this.state.path).x - 1;
-        break;
-    }
-    if(nextX > -1) {
-      this.setState({
-        path: PageConfig.find(page => page.x === nextX).path
-      });
-    }
-  }
-
-  // getRef = (ref) => {
-  //   detectSwipe(ref, this.swipe);
-  // }
-
   render() {
     const path = this.state.path;
     const showPage = PageConfig.find(page => page.path === path);
     return (
-      <div className="Pages"
-        // ref={ this.getRef }
-      >
-        {/* <ReactSwipe> */}
-        {
+      <div className="Pages">
+      {
+        this.props.isMobile ?
+          <ReactSwipe>
+          {
+            PageConfig.map((page, i) =>
+              <Page
+                key={page.path}
+                path={page.path}
+                component={page.component}
+              />
+            )
+          }
+          </ReactSwipe> :
           PageConfig.map((page, i) =>
             <Page
               key={page.path}
@@ -75,10 +62,10 @@ export default class extends Component {
               showPage={page.path === showPage.path}
             />
           )
-        }
-        {/* </ReactSwipe> */}
+      }
       </div>
     );
   }
 }
 
+export default withMobile(Pages);

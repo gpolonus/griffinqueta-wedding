@@ -4,4 +4,9 @@
 .Links {
   margin: 1rem 0;
   color: white;
+  display: none;
+
+  @include desktop {
+    display: initial;
+  }
 }

@@ -6,6 +6,12 @@
   background-position: 80% top;
   @include desktop {
     background-position: right top;
+
+    &.move {
+      .content {
+        top: 0;
+      }
+    }
   }
 
   .content {
@@ -17,12 +23,6 @@
       position: relative;
       left: 0;
       top: 100%;
-    }
-  }
-
-  &.move {
-    .content {
-      top: 0;
     }
   }
 }
