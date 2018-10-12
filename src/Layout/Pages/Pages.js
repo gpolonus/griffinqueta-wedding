@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 import './Pages.css';
 import PageConfig from '../../services/PageConfig';
 import Page from './Page/Page';
+import withMobile from '../../hoc/withMobile';
+import Swiper from '../../components/Swiper/Swiper';
 
 
-export default class extends Component {
+class Pages extends Component {
 
   state = {
     path: '/'
@@ -30,21 +32,30 @@ export default class extends Component {
   render() {
     const path = this.state.path;
     const showPage = PageConfig.find(page => page.path === path);
+
+    const pagesContent = PageConfig.map((page) =>
+      <Page
+        key={page.path}
+        path={page.path}
+        component={page.component}
+        changePath={this.changePath}
+        position={this.getPosition(showPage, page)}
+        showPage={page.path === showPage.path}
+      />
+    );
+
     return (
       <div className="Pages">
         {
-          PageConfig.map((page) =>
-            <Page
-              key={page.path}
-              path={page.path}
-              component={page.component}
-              changePath={this.changePath}
-              position={this.getPosition(showPage, page)}
-              showPage={page.path === showPage.path}
-            />
-          )
+          this.props.isMobile ?
+            <Swiper>
+              {pagesContent}
+            </Swiper> :
+            pagesContent
         }
       </div>
     );
   }
 }
+
+export default withMobile(Pages);
