@@ -3,14 +3,16 @@
 
 .FullPageImageAndText {
   position: relative;
-  height: 90%;
   width: 100%;
+  height: 70%;
+  @include desktop {
+    height: 90%;
+  }
 
   .Subtitle {
     position: absolute;
-    top: 40%;
+    top: 70%;
     text-align: center;
-    text-shadow: 0;
     z-index: 45;
     width: 100%;
     text-shadow: none;
