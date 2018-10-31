@@ -1,14 +1,28 @@
 
 import React from 'react';
 import './Page.css';
+import withMobile from '../../../hoc/withMobile';
 
-export default ({ component, position, changePath, path, showPage }) => {
+const Page = ({ component, position, changePath, path, showPage, showing, isMobile }) => {
   const Comp = component;
+  let styleProps = {};
+
+  if(!isMobile) {
+    styleProps = {
+      style: {
+        top: position.top,
+        left: position.left
+      }
+    };
+  }
+
   return (
     <div className="Page"
-      style={position}
+      {...styleProps}
     >
-      <Comp changePath={changePath} path={path} move={showPage} />
+      <Comp changePath={changePath} path={path} move={showPage} showing={showing} />
     </div>
   );
 }
+
+export default withMobile(Page);

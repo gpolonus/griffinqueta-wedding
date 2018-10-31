@@ -1,0 +1,25 @@
+
+@import '../../scss/mixins.scss';
+
+.FullPageImageAndText {
+  position: relative;
+  height: 90%;
+  width: 100%;
+
+  .Subtitle {
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    text-shadow: 0;
+    z-index: 45;
+    width: 100%;
+    text-shadow: none;
+  }
+
+  .img {
+    height: 100%;
+    width: 100%;
+    @include pic-bg('');
+    background-color: white;
+  }
+}
