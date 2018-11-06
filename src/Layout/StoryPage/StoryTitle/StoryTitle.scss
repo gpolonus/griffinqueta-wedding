@@ -1,6 +1,9 @@
+
+@import '../../../scss/mixins.scss';
+
 .StoryTitle {
   h1.Title {
     margin-top: 0;
-    padding-top: 30px;
+    color: $grey-dark;
   }
 }

@@ -5,17 +5,17 @@
   position: relative;
   width: 90%;
   margin: 0 5%;
-  height: 80%;
+  height: 40%;
+  @include desktop {
+    height: 80%;
+  }
 
   .baby {
     width: 50%;
     position: absolute;
     top: 0;
     transition: left $transition-time, right $transition-time;
-    height: 40%;
-    @include desktop {
-      height: 70%;
-    }
+    height: 70%;
 
     .image {
       height: 100%;
@@ -27,7 +27,12 @@
     }
 
     &.griffin {
-      left: -70%;
+      left: 0%;
+
+      @include desktop {
+        left: -70%;
+      }
+
       transition-delay: calc(#{$transition-time} + 0.5s);
       .image {
         @include pic-bg('./griffin_baby.jpg');
@@ -35,7 +40,12 @@
     }
 
     &.queta {
-      right: -70%;
+      right: 0%;
+
+      @include desktop {
+        right: -70%;
+      }
+
       transition-delay: calc(#{$transition-time} * 2 + 0.5s);
       .image {
         @include pic-bg('./queta_baby.jpg');

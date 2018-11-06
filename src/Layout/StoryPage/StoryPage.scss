@@ -3,17 +3,17 @@
 
 .StoryPage {
   text-align: center;
-  @include pic-full-bg('Engagement-0354-min-min.JPG');
-
-  .Overlay {
-    background-color: $purple-mid;
-    opacity: 0.5;
-  }
+  @include overlay(white, 1);
+  overflow-y: auto;
 
   .content {
     position: relative;
     z-index: 5;
     height: 100%;
+    margin-top: 50px;
+    @include desktop {
+      margin-top: 100px;
+    }
   }
 
 }

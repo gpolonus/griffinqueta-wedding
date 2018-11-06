@@ -15,27 +15,31 @@ export default [
     component: Homepage,
     title: 'Home',
     x: 0,
-    y: 0
+    y: 0,
+    isMobile: true
   },
   {
     path: '/details',
     component: DetailsPage,
     title: 'Details',
     x: 1,
-    y: 0
+    y: 0,
+    isMobile: true
   },
   {
     path: '/story',
     component: StoryPage,
     title: 'Our Story',
     x: 2,
-    y: 0
+    y: 0,
+    isMobile: true
   },
-  {
-    path: '/wedding-party',
-    component: PartyPage,
-    title: 'Wedding Party',
-    x: 3,
-    y: 0
-  },
+  // {
+  //   path: '/wedding-party',
+  //   component: PartyPage,
+  //   title: 'Wedding Party',
+  //   x: 3,
+  //   y: 0,
+  //   isMobile: true
+  // },
 ];

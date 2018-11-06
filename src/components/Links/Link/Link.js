@@ -2,6 +2,8 @@
 import React from 'react';
 import './Link.css';
 
-export default ({ path, title, changePath }) =>
+export default ({ path, title, changePath, disabled }) =>
   // <a className="Link" href={path}>{title}</a>;
-  <span className="Link" onClick={() => changePath(path)}>{title}</span>;
+  disabled ?
+    <span className="Link disabled">{title}</span> :
+    <span className="Link" onClick={() => changePath(path)}>{title}</span>;

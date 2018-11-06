@@ -1,0 +1,10 @@
+
+@import '../../scss/mixins.scss';
+
+.Swiper {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: $purple-light;
+}

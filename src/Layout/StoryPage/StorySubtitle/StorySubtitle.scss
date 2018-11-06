@@ -1,3 +1,8 @@
-.StorySubtitle {
 
+@import '../../../scss/mixins.scss';
+
+.StorySubtitle {
+  .Subtitle {
+    color: $grey-dark;
+  }
 }

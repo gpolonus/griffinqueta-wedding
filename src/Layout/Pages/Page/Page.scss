@@ -2,9 +2,17 @@
 @import '../../../scss/mixins.scss';
 
 .Page {
-  position: fixed;
+  position: absolute;
+
+  @include desktop {
+    position: fixed;
+  }
+
   top: 0;
   left: 0;
   height: 100%;
-  transition: left $transition-time, top $transition-time;
+
+  @include desktop {
+    transition: left $transition-time, top $transition-time;
+  }
 }
