@@ -6,7 +6,8 @@ span.Link {
   text-decoration: none;
   cursor: pointer;
 
-  &:hover {
+  &:hover, &.disabled {
     text-decoration: underline;
   }
+
 }

@@ -34,12 +34,12 @@ export default [
     y: 0,
     isMobile: true
   },
-  {
-    path: '/wedding-party',
-    component: PartyPage,
-    title: 'Wedding Party',
-    x: 3,
-    y: 0,
-    isMobile: true
-  },
+  // {
+  //   path: '/wedding-party',
+  //   component: PartyPage,
+  //   title: 'Wedding Party',
+  //   x: 3,
+  //   y: 0,
+  //   isMobile: true
+  // },
 ];

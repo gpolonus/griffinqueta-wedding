@@ -9,7 +9,13 @@ export default ({ img, children, color, opacity, imgPosition, imgSize }) => {
     <div className="FullPageImageAndText">
       <Subtitle color={color}>{ children }</Subtitle>
       <div className="img" style={{
-        backgroundImage: `url(${ img })`,
+        backgroundImage: `
+          linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.35)
+          ),
+          url(${ img })`,
         opacity,
         backgroundPosition: imgPosition,
         backgroundSize: imgSize
