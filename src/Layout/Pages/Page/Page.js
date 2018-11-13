@@ -7,14 +7,12 @@ const Page = ({ component, position, changePath, path, showPage, showing, isMobi
   const Comp = component;
   let styleProps = {};
 
-  if(!isMobile) {
-    styleProps = {
-      style: {
-        top: position.top,
-        left: position.left
-      }
-    };
-  }
+  styleProps = {
+    style: {
+      top: position.top,
+      left: position.left
+    }
+  };
 
   return (
     <div className="Page"

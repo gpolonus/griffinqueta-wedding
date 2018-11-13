@@ -4,11 +4,6 @@
 .Links {
   margin: 1rem 0;
   color: white;
-  display: none;
   cursor: default;
   font-size: 1.2rem;
-
-  @include desktop {
-    display: initial;
-  }
 }

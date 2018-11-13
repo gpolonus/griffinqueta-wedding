@@ -46,13 +46,7 @@ class Pages extends Component {
 
     return (
       <div className="Pages">
-        {
-          this.props.isMobile ?
-            <Swiper>
-              {pagesContent}
-            </Swiper> :
-            pagesContent
-        }
+        { pagesContent }
       </div>
     );
   }
