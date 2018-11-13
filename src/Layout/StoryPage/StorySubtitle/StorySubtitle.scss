@@ -4,5 +4,10 @@
 .StorySubtitle {
   .Subtitle {
     color: $grey-dark;
+    font-size: 1.5rem;
+
+    @include desktop {
+      font-size: 2rem;
+    }
   }
 }

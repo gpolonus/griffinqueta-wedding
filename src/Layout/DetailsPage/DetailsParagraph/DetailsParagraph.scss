@@ -4,6 +4,6 @@
 .DetailsParagraph {
   .Paragraph {
     color: black;
-    @include text-border(white);
+    margin-bottom: 3rem;
   }
 }

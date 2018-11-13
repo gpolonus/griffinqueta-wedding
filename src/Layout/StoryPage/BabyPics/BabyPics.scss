@@ -28,12 +28,8 @@
 
     &.griffin {
       left: 0%;
-
-      @include desktop {
-        left: -70%;
-      }
-
       transition-delay: calc(#{$transition-time} + 0.5s);
+
       .image {
         @include pic-bg('./griffin_baby.jpg');
       }
@@ -41,26 +37,10 @@
 
     &.queta {
       right: 0%;
-
-      @include desktop {
-        right: -70%;
-      }
-
       transition-delay: calc(#{$transition-time} * 2 + 0.5s);
+
       .image {
         @include pic-bg('./queta_baby.jpg');
-      }
-    }
-  }
-
-  &.move {
-    .baby {
-      &.griffin {
-        left: 0;
-      }
-
-      &.queta {
-        right: 0;
       }
     }
   }

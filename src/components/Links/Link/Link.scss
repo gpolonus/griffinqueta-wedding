@@ -5,9 +5,14 @@ span.Link {
   color: white;
   text-decoration: none;
   cursor: pointer;
+  text-decoration: underline;
 
   &:hover, &.disabled {
-    text-decoration: underline;
+    text-decoration: none;
+  }
+
+  &.disabled {
+    cursor: default;
   }
 
 }
