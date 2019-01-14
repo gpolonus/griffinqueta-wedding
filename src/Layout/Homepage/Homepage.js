@@ -12,7 +12,6 @@ export default ({ changePath }) => {
       <Subtitle classes="date">May 4th, 2019</Subtitle>
       <Subtitle>Davenport, Iowa</Subtitle>
       <FrontPageLinks changePath={changePath} />
-      <div className="swipe-alert">SWIPE >></div>
     </div>
   );
 }

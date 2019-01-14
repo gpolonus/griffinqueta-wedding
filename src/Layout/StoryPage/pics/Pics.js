@@ -26,6 +26,7 @@ import WeirdFacesWmbdPic from './weird-faces-wmbd.jpg';
 import LollaPic from './lolla.jpg';
 import NiagraSmilesPic from './niagra-smiles.jpg';
 import SillySmileysPic from './silly-smileys.jpg';
+import Engagement0299Pic from './Engagement-0299.JPG'
 
 export const StarvedRock = StarvedRockPic;
 export const Kennys = KennysPic;
@@ -54,3 +55,4 @@ export const WeirdFacesWmbd = WeirdFacesWmbdPic;
 export const Lolla = LollaPic;
 export const NiagraSmiles = NiagraSmilesPic;
 export const SillySmileys = SillySmileysPic;
+export const Engagement0299 = Engagement0299Pic;

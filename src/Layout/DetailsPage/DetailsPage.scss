@@ -3,26 +3,38 @@
 
 .DetailsPage {
   @include pic-full-bg('Engagement-0137-min.JPG');
+  overflow: hidden;
   background-position: 80% top;
   @include desktop {
     background-position: right top;
+    overflow-y: auto;
   }
 
   .content {
-    transition: top $transition-time;
-    transition-delay: $transition-time;
+
     @include desktop {
-      width: 50%;
-      padding-left: 5%;
+      width: 45%;
+      padding: 50px 3%;
       position: relative;
       left: 0;
-      top: 100%;
-    }
-  }
-
-  &.move {
-    .content {
       top: 0;
+      min-height: calc(100% - 100px);
+      background: rgba(255, 255, 255, 0.5);
+      overflow-y: auto;
+    }
+
+    .inner-content {
+      background: white;
+      position: absolute;
+      bottom: 0;
+      height: 60%;
+      overflow-y: auto;
+
+      @include desktop {
+        bottom: auto;
+        background: none;
+        overflow-y: hidden;
+      }
     }
   }
 }

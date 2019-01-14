@@ -1,3 +1,10 @@
-.DetailsHeader {
 
+@import '../../../scss/mixins.scss';
+
+.DetailsHeader {
+  padding-bottom: 5%;
+
+  @include desktop {
+    padding-bottom: 0;
+  }
 }

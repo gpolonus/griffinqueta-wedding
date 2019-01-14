@@ -2,15 +2,11 @@
 @import '../../../scss/mixins.scss';
 
 .Page {
-  position: absolute;
-
-  @include desktop {
-    position: fixed;
-  }
-
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
+  // transition: left calc(#{$transition-time} / 2), top calc(#{$transition-time} / 2);
 
   @include desktop {
     transition: left $transition-time, top $transition-time;
