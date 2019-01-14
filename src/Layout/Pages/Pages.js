@@ -4,7 +4,7 @@ import './Pages.css';
 import PageConfig from '../../services/PageConfig';
 import Page from './Page/Page';
 import withMobile from '../../hoc/withMobile';
-import Swiper from '../../components/Swiper/Swiper';
+// import Swiper from '../../components/Swiper/Swiper';
 
 
 class Pages extends Component {
